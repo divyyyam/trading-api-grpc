@@ -1,0 +1,16 @@
+Client
+  │
+  ▼
+API Gateway (TS) ──gRPC──► Auth Service (Rust)
+  │
+  ├──gRPC──► Wallet Service (Rust)
+  │
+  ├──gRPC──► Order Service (Rust)
+  │               └──gRPC──► Matching Engine (Rust)
+  │                               └──gRPC──► Wallet Service (settle trade)
+  │
+  ├──gRPC──► Market Data Service (Rust)
+  │               └── streams price ticks via gRPC server-streaming
+  │
+  └──gRPC──► Notification Service (TS)
+                  └──WebSocket──► Client (real-time fills & alerts)
