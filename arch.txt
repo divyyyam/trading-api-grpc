@@ -14,3 +14,20 @@ API Gateway (TS) ──gRPC──► Auth Service (Rust)
   │
   └──gRPC──► Notification Service (TS)
                   └──WebSocket──► Client (real-time fills & alerts)
+
+
+
+auth schema
+1. id, email, passwordHash, createdAt, updatedAt, username
+
+
+//wallet Service
+
+
+//order Service
+
+//notiificaiton service
+
+//market data service
+  streaming data via gRPC server-streaming
+
